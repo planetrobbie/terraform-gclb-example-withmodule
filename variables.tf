@@ -6,7 +6,7 @@ variable "network" {
 variable "startup_script" {
   description = "what to run at startup"
   type = "string"
-  default = <<EOF
+  default = <<EOS
 #!/bin/bash -xe
 
 apt-get update
@@ -112,9 +112,9 @@ function metadata_value($value) {
 EOF
 sudo mv /var/www/html/index.html /var/www/html/index.html.old
 
-[[ -n "${PROXY_PATH}" ]] && mkdir -p /var/www/html/${PROXY_PATH} && cp /var/www/html/index.php /var/www/html/${PROXY_PATH}/index.php
+mkdir -p /var/www/html/ && cp /var/www/html/index.php /var/www/html/index.php
 
 systemctl enable apache2
 systemctl restart apache2
-EOF
+EOS
 }
