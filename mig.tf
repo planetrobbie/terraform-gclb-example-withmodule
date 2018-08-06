@@ -8,6 +8,7 @@ variable group2_size {
 
 module "mig1" {
   source            = "app.terraform.io/emea-se-playground/managed-instance-group/google"
+  version           = "1.1.10"
   region            = "europe-west2"
   zone              = "europe-west2-b"
   network           = "${var.network}"
@@ -21,6 +22,7 @@ module "mig1" {
 
 module "mig2" {
   source            = "app.terraform.io/emea-se-playground/managed-instance-group/google"
+  version           = "1.1.10"
   region            = "europe-west3"
   zone              = "europe-west3-b"
   network           = "${var.network}"
@@ -33,6 +35,11 @@ module "mig2" {
 }
 
 data "template_file" "group-startup-script" {
+  
+  vars {
+    PROXY_PATH = ""
+  }
+
   template = <<EOF
 #!/bin/bash -xe
 
@@ -144,8 +151,4 @@ sudo mv /var/www/html/index.html /var/www/html/index.html.old
 systemctl enable apache2
 systemctl restart apache2
 EOF
-
-  vars {
-    PROXY_PATH = ""
-  }
 }
