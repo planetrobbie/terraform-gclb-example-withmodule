@@ -5,6 +5,7 @@ variable "network" {
 
 variable "startup_script" {
   description = "what to run at startup"
+  type = "string"
   default = <<EOF
 #!/bin/bash -xe
 
