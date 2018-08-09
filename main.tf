@@ -1,5 +1,5 @@
 module "gce-lb-http" {
-  source  = ""replicated.yet.org/yet/lb-http/google
+  source  = "replicated.yet.org/yet/lb-http/google"
   version = "1.0.8"
   name        = "group-http-lb"
 
