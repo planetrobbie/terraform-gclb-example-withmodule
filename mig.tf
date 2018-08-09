@@ -8,7 +8,7 @@ variable group2_size {
 
 module "mig1" {
   source            = "replicated.yet.org/yet/managed-instance-group/google"
-  version           = "1.1.10"
+  version           = "1.1.11"
   region            = "europe-west2"
   zone              = "europe-west2-b"
   network           = "${var.network}"
