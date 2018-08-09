@@ -7,7 +7,7 @@ variable group2_size {
 }
 
 module "mig1" {
-  source            = "app.terraform.io/emea-se-playground/managed-instance-group/google"
+  source            = "replicated.yet.org/yet/managed-instance-group/google"
   version           = "1.1.10"
   region            = "europe-west2"
   zone              = "europe-west2-b"
@@ -21,7 +21,7 @@ module "mig1" {
 }
 
 module "mig2" {
-  source            = "app.terraform.io/emea-se-playground/managed-instance-group/google"
+  source            = "replicated.yet.org/yet/managed-instance-group/google"
   version           = "1.1.10"
   region            = "europe-west3"
   zone              = "europe-west3-b"
