@@ -1,7 +1,7 @@
-module "gce-lb-http" {
+module "lb-http" {
   source  = "replicated.yet.org/yet/lb-http/google"
   version = "1.0.8"
-  name        = "group-http-lb"
+  name    = "group-http-lb"
 
   target_tags = ["${module.mig1.target_tags}", "${module.mig2.target_tags}"]
 
