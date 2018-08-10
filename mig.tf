@@ -22,7 +22,7 @@ module "mig1" {
 
 module "mig2" {
   source            = "replicated.yet.org/yet/managed-instance-group/google"
-  version           = "1.1.10"
+  version           = "1.1.11"
   region            = "europe-west3"
   zone              = "europe-west3-b"
   network           = "${var.network}"
