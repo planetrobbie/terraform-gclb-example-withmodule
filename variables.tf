@@ -10,7 +10,7 @@ variable "startup_script" {
 #!/bin/bash -xe
 
 apt-get update
-apt-get install -y apache2 php5
+apt-get install -y apache2 php
 
 cat > /var/www/html/index.php <<'EOF'
 <?php
