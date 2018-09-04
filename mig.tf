@@ -3,7 +3,7 @@ variable group1_size {
 }
 
 variable group2_size {
-  default = "2"
+  default = "3"
 }
 
 module "mig1" {
