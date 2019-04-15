@@ -1,3 +1,7 @@
+provider "google" {
+  version = "1.20.0"
+}
+
 module "gce-lb-http" {
   source  = "app.terraform.io/emea-se-playground-2019/lb-http/google"
   version = "1.0.8"
