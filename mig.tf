@@ -7,7 +7,7 @@ variable group2_size {
 }
 
 module "mig1" {
-  source            = "app.terraform.io/emea-se-playground/managed-instance-group/google"
+  source            = "app.terraform.io/emea-se-playground-2019/managed-instance-group/google"
   version           = "1.1.10"
   compute_image	    = "debian-cloud/debian-9"
   region            = "europe-west2"
@@ -22,7 +22,7 @@ module "mig1" {
 }
 
 module "mig2" {
-  source            = "app.terraform.io/emea-se-playground/managed-instance-group/google"
+  source            = "app.terraform.io/emea-se-playground-2019/managed-instance-group/google"
   version           = "1.1.10"
   compute_image     = "debian-cloud/debian-9"
   region            = "europe-west3"

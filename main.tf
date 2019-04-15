@@ -1,5 +1,5 @@
 module "gce-lb-http" {
-  source  = "app.terraform.io/emea-se-playground/lb-http/google"
+  source  = "app.terraform.io/emea-se-playground-2019/lb-http/google"
   version = "1.0.8"
   name        = "group-http-lb"
 
